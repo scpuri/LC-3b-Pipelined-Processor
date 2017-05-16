@@ -1,0 +1,12 @@
+ORIGIN 4x0000
+SEGMENT  CodeSegment:
+	LEA R1, d1
+	LEA R2, d2
+	LEA R1, d3
+	LEA R1, d4
+Done:	BRnzp Done
+
+d1: DATA2 4x0000
+d2: DATA2 4x0002
+d3: DATA2 4x0004
+d4: DATA2 4x0006

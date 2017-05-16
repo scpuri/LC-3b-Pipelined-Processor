@@ -1,0 +1,20 @@
+Functionality Implemented:
+Instruction queue, alu reservation stations, reorder buffer.
+One instruction fetched per cycle. Space allocated for it in
+reorder buffer. Dispatched to alu by arbiter, then committed
+in order. Dependencies resolved by reservation stations, with
+instructions still committing in order.
+
+Resolved Issues:
+Reorder buffer stalled when full and deadlocked without committing
+instructions to make room. Resolved by correcting full detection
+logic.
+
+Pending Issues:
+After the reorder buffer fills, register file writes take two cycles instead of one. More importantly, for the first cycle, the register file receives
+an incorrect value.
+
+Goals:
+Continue implementing instructions. Add load/store queue. Then add logic
+to deal with control hazards. After correctness is guaranteed for all
+instructions, add branch predictor and cache. Finally, attempt superscalar.

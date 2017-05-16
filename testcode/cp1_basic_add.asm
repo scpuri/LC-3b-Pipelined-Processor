@@ -1,0 +1,9 @@
+ORIGIN 4x0000
+SEGMENT  CodeSegment:
+	ADD R1, R1, 1
+	ADD R1, R1, 2
+	ADD R1, R1, 3
+	ADD R1, R1, 4
+	ADD R1, R1, 5
+	ADD R1, R1, 6
+	
